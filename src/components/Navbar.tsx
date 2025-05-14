@@ -1,32 +1,50 @@
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Navbar() {
   return (
-    <nav className="bg-white shadow-md px-4 py-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <Link href="/" className="text-xl font-bold text-primary">
-            SV Marines
+    <header className="w-full absolute top-0 left-0 z-10 py-8">
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        {/* Left Nav */}
+        <nav className="flex items-center space-x-8">
+          <Link href="/" className="text-white hover:text-gray-200">
+            Home
+          </Link>
+          <Link href="/about-us" className="text-white hover:text-gray-200">
+            About Us
+          </Link>
+          <Link href="/service" className="text-white hover:text-gray-200">
+            Service
+          </Link>
+          <Link href="/contact" className="text-white hover:text-gray-200">
+            Contact
+          </Link>
+        </nav>
+
+        {/* Center Logo */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 top-4">
+          <Link href="/">
+            <Image 
+              src="/images/website-logo.png" 
+              alt="SV Marine Services" 
+              width={150} 
+              height={150}
+              className="p-1"
+            />
           </Link>
         </div>
-        
-        <div className="hidden md:flex space-x-8">
-          <Link href="/" className="text-gray-700 hover:text-primary">Home</Link>
-          <Link href="/about" className="text-gray-700 hover:text-primary">About</Link>
-          <Link href="/services" className="text-gray-700 hover:text-primary">Services</Link>
-          <Link href="/projects" className="text-gray-700 hover:text-primary">Projects</Link>
-          <Link href="/contact" className="text-gray-700 hover:text-primary">Contact</Link>
-        </div>
-        
-        <div className="md:hidden">
-          <button className="text-gray-700 focus:outline-none">
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
+
+        {/* Right Contact Button */}
+        <div>
+          <Link 
+            href="/contact" 
+            className="bg-[#FF5722] text-white rounded-md py-2 px-6 font-medium uppercase"
+          >
+            Contact Now
+          </Link>
         </div>
       </div>
-    </nav>
+    </header>
   );
 } 

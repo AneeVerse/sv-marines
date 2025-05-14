@@ -19,8 +19,8 @@ export default function Home() {
       <main className="py-16">
         <ClientLogos />
         <MarineOperations />
-        <About />
         <Services />
+        <About />
         <Stats />
         <Contact />
         <Map />
