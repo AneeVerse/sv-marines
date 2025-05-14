@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from '@/components/Header';
+import Image from 'next/image';
+import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ClientLogos from '@/components/ClientLogos';
 import MarineOperations from '@/components/MarineOperations';
@@ -12,17 +13,19 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main>
-      <Header />
+    <>
+      <Navbar />
       <Hero />
-      <ClientLogos />
-      <MarineOperations />
-      <About />
-      <Services />
-      <Stats />
-      <Contact />
-      <Map />
+      <main className="py-16">
+        <ClientLogos />
+        <MarineOperations />
+        <About />
+        <Services />
+        <Stats />
+        <Contact />
+        <Map />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 } 

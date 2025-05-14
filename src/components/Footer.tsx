@@ -4,23 +4,20 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="bg-black text-white pt-16 pb-8">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between mb-16 gap-10">
-          <div className="max-w-2xl">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+          <div className="col-span-2">
             <h3 className="text-4xl font-semibold mb-10 leading-tight">
-              Your Trusted Marine Partner. 
-              <span className="block mt-2">
+              Your Trusted Marine Partner
+              <span className="block mt-2 text-lg">
                 Office 61, Citi Tower Plot-55, Sector-15, C.B.D, Belapur, Navi Mumbai - 400 614
               </span>
-              <span className="block mt-2">
+              <span className="block mt-2 text-lg">
                 shashiraaj@svmarines.com
               </span>
             </h3>
             
-            {/* Logo placeholder */}
-            <div className="bg-white w-48 h-48 rounded-lg mb-10"></div>
-            
-            <div className="relative">
+            <div className="relative mt-8">
               <input 
                 type="email" 
                 placeholder="Enter Your Email Address" 
@@ -36,11 +33,32 @@ const Footer = () => {
               </button>
             </div>
           </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li><Link href="/" className="text-gray-400 hover:text-white">Home</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-white">Services</Link></li>
+              <li><Link href="/projects" className="text-gray-400 hover:text-white">Projects</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li><Link href="/services" className="text-gray-400 hover:text-white">Marine Engineering</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-white">Ship Repair</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-white">Naval Architecture</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-white">Consulting</Link></li>
+            </ul>
+          </div>
         </div>
         
         <div className="border-t border-gray-800 py-6">
-          <div className="flex flex-col md:flex-row justify-between">
-            <p className="text-gray-400">© 2025 SV Marine Services. All Rights Reserved</p>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400">© {new Date().getFullYear()} SV Marine Services. All Rights Reserved</p>
             
             <ul className="flex space-x-8 mt-4 md:mt-0">
               <li>
@@ -71,4 +89,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
