@@ -5,11 +5,21 @@ import Image from 'next/image';
 
 // Preload images
 const logoPaths = [
-  "/images/logo/WhatsApp Image 2025-04-18 at 2.33.20 PM.png",
+  "/images/logo/2.png",
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.19 PM.png",
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.16 PM.png",
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.18 PM.png",
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.10 PM.png",
+  "/images/logo/WhatsApp Image 2025-04-18 at 2.33.13 PM.png",
+  "/images/logo/1 (1).png",
+  "/images/logo/1 (2).png",
+  "/images/logo/1 (3).png",
+  "/images/logo/2.png",
+  "/images/logo/WhatsApp Image 2025-04-18 at 2.33.19 PM.png",
+  "/images/logo/WhatsApp Image 2025-04-18 at 2.33.16 PM.png",
+  "/images/logo/WhatsApp Image 2025-04-18 at 2.33.18 PM.png",
+  "/images/logo/WhatsApp Image 2025-04-18 at 2.33.10 PM.png",
+  "/images/logo/WhatsApp Image 2025-04-18 at 2.33.13 PM.png",
 ];
 
 const ClientLogos = () => {
@@ -25,7 +35,7 @@ const ClientLogos = () => {
                 <img 
                   src={src}
                   alt={`Client Logo ${index + 1}`}
-                  className="h-16 w-auto max-w-[160px] object-contain"
+                  className="h-24 w-auto max-w-[180px] object-contain"
                 />
               </div>
             ))}
@@ -35,7 +45,7 @@ const ClientLogos = () => {
                 <img 
                   src={src}
                   alt={`Client Logo ${index + 1}`}
-                  className="h-16 w-auto max-w-[160px] object-contain"
+                  className="h-24 w-auto max-w-[180px] object-contain"
                 />
               </div>
             ))}

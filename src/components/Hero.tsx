@@ -43,19 +43,19 @@ const Hero = () => {
       />
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-28 hero-content">
+      <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-28 hero-content">
         {/* Badge */}
-        <div className="inline-block bg-[#FF5722] text-white px-4 py-1.5 rounded-full mb-6 text-sm">
+        <div className="inline-block bg-[#FF5722] text-white px-3 py-1 md:px-4 md:py-1.5 rounded-full mb-4 md:mb-6 text-xs md:text-sm">
           SV MARINE SERVICES
         </div>
 
         {/* Heading */}
-        <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6 max-w-2xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 md:mb-6 max-w-2xl">
           Your End-to-End Marine Solutions Partner Since 2013
         </h1>
 
         {/* Description */}
-        <p className="text-gray-200 text-lg mb-10 max-w-2xl">
+        <p className="text-gray-200 text-base md:text-lg mb-6 md:mb-10 max-w-2xl">
           Navi Mumbai's trusted marine consultancy offering project management, surveying, 
           towing, and salvage services—combining innovation with 10+ years of hands-on expertise.
         </p>
@@ -64,11 +64,11 @@ const Hero = () => {
         <div className="flex flex-wrap">
           <button 
             onClick={() => scrollToSection('stats')}
-            className="flex items-center relative h-[55px] pl-8 pr-[60px] bg-[#F9F9F9] rounded-[30px] transition-all cursor-pointer"
+            className="flex items-center relative h-[45px] md:h-[55px] pl-6 md:pl-8 pr-[50px] md:pr-[60px] bg-[#F9F9F9] rounded-[30px] transition-all cursor-pointer"
           >
-            <span className="font-dm-sans font-medium text-[15px] leading-[30px] text-black capitalize">Who We Are</span>
-            <div className="absolute w-[45px] h-[45px] right-[5px] top-[5px] bg-[#F55B1F] rounded-full flex items-center justify-center">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <span className="font-dm-sans font-medium text-[14px] md:text-[15px] leading-[30px] text-black capitalize">Who We Are</span>
+            <div className="absolute w-[35px] h-[35px] md:w-[45px] md:h-[45px] right-[5px] top-[5px] bg-[#F55B1F] rounded-full flex items-center justify-center">
+              <svg width="12" height="12" className="md:w-[14px] md:h-[14px]" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 1L13 7M13 7L7 13M13 7H1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>

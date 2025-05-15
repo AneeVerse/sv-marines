@@ -137,6 +137,14 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     max-width: 960px;
   }
+  
+  .section {
+    padding: 70px 0;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 12px 25px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -147,10 +155,72 @@ h1, h2, h3, h4, h5, h6 {
   .section {
     padding: 60px 0;
   }
+  
+  .service-card {
+    padding: 30px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .btn-circle {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 576px) {
   .container {
     max-width: 540px;
+    padding: 0 15px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .service-card {
+    padding: 20px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .btn-circle {
+    width: 35px;
+    height: 35px;
+  }
+  
+  h1 {
+    font-size: 32px !important;
+  }
+  
+  h2 {
+    font-size: 28px !important;
+  }
+  
+  h3 {
+    font-size: 22px !important;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile first responsive styles */
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none;
   }
 } 
