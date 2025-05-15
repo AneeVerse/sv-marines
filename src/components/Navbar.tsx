@@ -22,7 +22,7 @@ export default function Navbar() {
   }, [scrolled]);
   
   return (
-    <header className={`w-full fixed top-0 left-0 z-50 py-6 transition-all duration-300 ${scrolled ? 'bg-black/50 shadow-lg' : 'bg-transparent'}`}>
+    <header className={`w-full fixed top-0 left-0 z-50 py-6 transition-all duration-300 ${scrolled ? 'bg-black/50 shadow-lg' : 'bg-black/50 shodow-lg'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Left Nav */}
         <nav className="flex items-center space-x-8">
