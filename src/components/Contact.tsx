@@ -1,9 +1,44 @@
 "use client";
 
-import React from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import Image from 'next/image';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    // Format message for WhatsApp
+    const whatsappNumber = '918097175678'; // Include country code without + sign
+    const message = `
+*New Contact Form Submission*
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Email:* ${formData.email}
+*Message:* ${formData.message}
+`;
+    
+    // Create WhatsApp URL with encoded message
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp in a new tab/window
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto">
@@ -80,30 +115,46 @@ const Contact = () => {
               We're here to help with all your marine service needs. Fill out the form below and we'll respond promptly.
             </p>
             
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Your name"
                   className="border border-gray-300 rounded-md p-3 w-full"
+                  required
                 />
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="Phone number"
                   className="border border-gray-300 rounded-md p-3 w-full"
+                  required
                 />
               </div>
               
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Your email"
                 className="border border-gray-300 rounded-md p-3 w-full"
+                required
               />
               
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Message"
                 rows={6}
                 className="border border-gray-300 rounded-md p-3 w-full"
+                required
               ></textarea>
               
               <div className="flex justify-start">

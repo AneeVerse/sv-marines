@@ -1,85 +1,88 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-          <div className="col-span-2">
-            <h3 className="text-4xl font-semibold mb-10 leading-tight">
-              Your Trusted Marine Partner
-              <span className="block mt-2 text-lg">
-                Office 61, Citi Tower Plot-55, Sector-15, C.B.D, Belapur, Navi Mumbai - 400 614
-              </span>
-              <span className="block mt-2 text-lg">
-                shashiraaj@svmarines.com
-              </span>
-            </h3>
+    <footer className="bg-[#001529] text-white">
+      {/* Main Footer Area */}
+      <div className="w-full py-14 border-b border-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center relative">
+            {/* Map Section Full Width */}
+            <div className="absolute top-0 left-0 right-0 h-[400px] -mt-[400px] z-0">
+              {/* Map is rendered before footer, this is for the positioning */}
+            </div>
             
-            <div className="relative mt-8">
-              <input 
-                type="email" 
-                placeholder="Enter Your Email Address" 
-                className="bg-white text-black p-5 w-full rounded-3xl"
-              />
-              <button className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-blue-900 text-white py-4 px-8 rounded-3xl flex items-center">
-                Subscribe
-                <span className="ml-2 bg-white w-10 h-10 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 text-blue-900">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </span>
-              </button>
+            {/* Information Bar - Takes full width */}
+            <div className="w-full bg-[#001529] py-10 px-4 md:px-12 rounded-lg z-10 flex flex-col md:flex-row items-center justify-between">
+              <div className="text-left mb-8 md:mb-0 md:w-1/3">
+                <h3 className="text-3xl font-bold mb-1">Your Trusted Marine Partner</h3>
+                <p className="text-sm text-gray-300 mb-2">Office 61, Citi Tower Plot-55, Sector-15, C.B.D, Belapur, Navi Mumbai - 400 614</p>
+                <p className="text-sm text-gray-300">shashiraaj@svmarines.com</p>
+              </div>
+              
+              <div className="flex-shrink-0 mb-8 md:mb-0">
+                <Image 
+                  src="/images/footer-logo.png"
+                  alt="SV Marine Services Logo"
+                  width={160}
+                  height={160}
+                />
+              </div>
+              
+              <div className="md:w-1/3">
+                <div className="relative w-full max-w-md mx-auto md:ml-auto md:mr-0">
+                  <input 
+                    type="email" 
+                    placeholder="Enter Your Email Address" 
+                    className="bg-white text-gray-900 p-4 pr-20 w-full rounded-full outline-none"
+                  />
+                  <button className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-[#003088] text-white py-2 px-4 rounded-full flex items-center h-10">
+                    Connect Now
+                    <div className="ml-2 bg-white rounded-full w-6 h-6 flex items-center justify-center">
+                      <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1L13 7M13 7L7 13M13 7H1" stroke="#003088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-400 hover:text-white">Home</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
-              <li><Link href="/services" className="text-gray-400 hover:text-white">Services</Link></li>
-              <li><Link href="/projects" className="text-gray-400 hover:text-white">Projects</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li><Link href="/services" className="text-gray-400 hover:text-white">Marine Engineering</Link></li>
-              <li><Link href="/services" className="text-gray-400 hover:text-white">Ship Repair</Link></li>
-              <li><Link href="/services" className="text-gray-400 hover:text-white">Naval Architecture</Link></li>
-              <li><Link href="/services" className="text-gray-400 hover:text-white">Consulting</Link></li>
-            </ul>
-          </div>
         </div>
-        
-        <div className="border-t border-gray-800 py-6">
+      </div>
+      
+     
+      
+      {/* Copyright */}
+      <div className="border-t border-gray-800 py-6">
+        <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">© {new Date().getFullYear()} SV Marine Services. All Rights Reserved</p>
             
             <ul className="flex space-x-8 mt-4 md:mt-0">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="text-gray-400 hover:text-white transition-colors">
                   Home
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})} className="text-gray-400 hover:text-white transition-colors">
                   About Us
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'})} className="text-gray-400 hover:text-white transition-colors">
                   Services
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} className="text-gray-400 hover:text-white transition-colors">
                   Contact
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
