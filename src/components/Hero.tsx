@@ -4,6 +4,16 @@ import React from 'react';
 import Link from 'next/link';
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center hero-wrapper">
       {/* Background Video Container */}
@@ -52,9 +62,9 @@ const Hero = () => {
 
         {/* CTA Button */}
         <div className="flex flex-wrap">
-          <Link 
-            href="/about-us"
-            className="flex items-center relative h-[55px] pl-8 pr-[60px] bg-[#F9F9F9] rounded-[30px] transition-all"
+          <button 
+            onClick={() => scrollToSection('stats')}
+            className="flex items-center relative h-[55px] pl-8 pr-[60px] bg-[#F9F9F9] rounded-[30px] transition-all cursor-pointer"
           >
             <span className="font-dm-sans font-medium text-[15px] leading-[30px] text-black capitalize">Who We Are</span>
             <div className="absolute w-[45px] h-[45px] right-[5px] top-[5px] bg-[#F55B1F] rounded-full flex items-center justify-center">
@@ -62,7 +72,7 @@ const Hero = () => {
                 <path d="M7 1L13 7M13 7L7 13M13 7H1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-          </Link>
+          </button>
         </div>
       </div>
     </section>

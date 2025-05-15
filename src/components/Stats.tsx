@@ -1,10 +1,22 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Stats = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <section className="py-16 bg-[#001529] text-white relative overflow-hidden">
+    <section id="stats" className="py-16 bg-[#001529] text-white relative overflow-hidden">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left side - heading and checkboxes */}
@@ -92,9 +104,9 @@ const Stats = () => {
             </div>
             
             <div className="inline-block">
-              <Link 
-                href="/services" 
-                className="border border-white rounded-full py-3 px-8 text-sm font-medium inline-flex items-center hover:bg-white hover:text-[#001529] transition-colors duration-300"
+              <button 
+                onClick={() => scrollToSection('services')}
+                className="border border-white rounded-full py-3 px-8 text-sm font-medium inline-flex items-center hover:bg-white hover:text-[#001529] transition-colors duration-300 cursor-pointer"
               >
                 More Details
                 <div className="ml-4 bg-white rounded-full w-10 h-10 flex items-center justify-center text-[#001529]">
@@ -102,7 +114,7 @@ const Stats = () => {
                     <path d="M7 1L13 7M13 7L7 13M13 7H1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-              </Link>
+              </button>
             </div>
           </div>
           

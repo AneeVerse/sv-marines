@@ -1,9 +1,11 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 
 const Services = () => {
   return (
-    <section className="py-20 bg-[#00112E] text-white">
+    <section id="services" className="py-20 bg-[#00112E] text-white">
       <div className="container mx-auto">
         <div className="mb-16">
           <span className="uppercase text-xs tracking-wider font-semibold">Our experience</span>

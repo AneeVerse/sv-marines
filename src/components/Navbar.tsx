@@ -21,33 +21,55 @@ export default function Navbar() {
     };
   }, [scrolled]);
   
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 100, // Offset for header height
+        behavior: 'smooth'
+      });
+    }
+  };
+  
   return (
     <header className={`w-full fixed top-0 left-0 z-50 py-6 transition-all duration-300 ${scrolled ? 'bg-black/50 shadow-lg' : 'bg-black/50 shodow-lg'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Left Nav */}
         <nav className="flex items-center space-x-8">
-          <Link href="/" className="text-white hover:text-gray-200">
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="text-white hover:text-gray-200 cursor-pointer"
+          >
             Home
-          </Link>
-          <Link href="/about-us" className="text-white hover:text-gray-200">
+          </button>
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="text-white hover:text-gray-200 cursor-pointer"
+          >
             About Us
-          </Link>
-          <Link href="/service" className="text-white hover:text-gray-200">
+          </button>
+          <button 
+            onClick={() => scrollToSection('services')}
+            className="text-white hover:text-gray-200 cursor-pointer"
+          >
             Service
-          </Link>
-          <Link href="/contact" className="text-white hover:text-gray-200">
+          </button>
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="text-white hover:text-gray-200 cursor-pointer"
+          >
             Contact
-          </Link>
+          </button>
         </nav>
 
         {/* Right Contact Button */}
         <div>
-          <Link 
-            href="/contact" 
-            className="bg-[#FF5722] text-white rounded-md py-2 px-6 font-medium uppercase"
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="bg-[#FF5722] text-white rounded-md py-2 px-6 font-medium uppercase cursor-pointer"
           >
             Contact Now
-          </Link>
+          </button>
         </div>
       </div>
     </header>

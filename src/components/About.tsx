@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -5,7 +7,7 @@ import Image from 'next/image';
 const About = () => {
   return (
     <>
-      <section className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div className="flex flex-col justify-center">
@@ -20,9 +22,17 @@ const About = () => {
               </p>
               
               <div className="inline-flex">
-                <Link
-                  href="/contact"
-                  className="contact-btn relative overflow-hidden border-2 border-black rounded-full py-3 px-8 font-medium flex items-center group"
+                <button
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      window.scrollTo({
+                        top: contactSection.offsetTop - 100,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }}
+                  className="contact-btn relative overflow-hidden border-2 border-black rounded-full py-3 px-8 font-medium flex items-center group cursor-pointer"
                 >
                   <span className="relative z-10 transition-colors duration-300 group-hover:text-black">CONTACT NOW</span>
                   <span className="absolute inset-0 bg-[#F55B1F] transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 -z-10"></span>
@@ -32,7 +42,7 @@ const About = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </span>
-                </Link>
+                </button>
               </div>
             </div>
             
@@ -72,9 +82,17 @@ const About = () => {
               </p>
               
               <div className="inline-flex">
-                <Link
-                  href="/contact"
-                  className="contact-btn relative overflow-hidden border-2 border-black rounded-full py-3 px-8 font-medium flex items-center group"
+                <button
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      window.scrollTo({
+                        top: contactSection.offsetTop - 100,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }}
+                  className="contact-btn relative overflow-hidden border-2 border-black rounded-full py-3 px-8 font-medium flex items-center group cursor-pointer"
                 >
                   <span className="relative z-10 transition-colors duration-300 group-hover:text-black">CONTACT NOW</span>
                   <span className="absolute inset-0 bg-[#F55B1F] transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 -z-10"></span>
@@ -84,7 +102,7 @@ const About = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </span>
-                </Link>
+                </button>
               </div>
             </div>
           </div>

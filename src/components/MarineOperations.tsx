@@ -1,8 +1,20 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const MarineOperations = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section className="py-16 bg-white mt-10 ml-32">
       <div className="container mx-auto px-4">
@@ -60,15 +72,15 @@ const MarineOperations = () => {
             </div>
             
             <div>
-              <Link
-                href="/about"
-                className="bg-[#FF5722] text-white rounded-full py-3 px-6 font-medium inline-flex items-center hover:bg-opacity-90 transition-all"
+              <button
+                onClick={() => scrollToSection('about')}
+                className="bg-[#FF5722] text-white rounded-full py-3 px-6 font-medium inline-flex items-center hover:bg-opacity-90 transition-all cursor-pointer"
               >
                 Discover More
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 ml-2">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </Link>
+              </button>
             </div>
           </div>
           
