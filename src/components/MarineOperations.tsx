@@ -86,14 +86,14 @@ const MarineOperations = () => {
           
           {/* Right Images Column */}
           <div className="relative mt-6 md:mt-0">
-            {/* Main image with larger logo */}
-            <div className="mb-4">
+            {/* Main image with hover zoom animation */}
+            <div className="mb-4 overflow-hidden rounded-lg group">
               <Image 
                 src="/images/logo/marineoperation-right-img.png" 
                 alt="Marine operations image"
                 width={550}
                 height={300}
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-auto object-cover rounded-lg transition-transform duration-1000 ease-in-out group-hover:scale-110 transform-gpu"
               />
             </div>
           </div>

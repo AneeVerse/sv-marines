@@ -66,28 +66,38 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="py-12 md:py-20 bg-[#00112E] text-white">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-12 md:py-20 bg-[#00112E] text-white relative overflow-hidden">
+      {/* Background image */}
+      <div className="absolute top-0 right-0 w-full h-full md:w-full md:h-full z-0 opacity-70">
+        <Image 
+          src="/images/service-bg.png"
+          alt="Service background"
+          fill
+          className="object-contain object-right-top"
+        />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="mb-10 md:mb-16">
           <span className="uppercase text-xs tracking-wider font-semibold">Our services</span>
           <div className="flex justify-between items-end">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-2 md:mt-4">Essential Features of our Services.</h2>
             
             {/* Scroll Controls - Hidden on mobile (swipe instead) */}
-            <div className="hidden md:flex gap-2">
+            <div className="hidden md:flex gap-2 mr-40">
               <button 
                 onClick={() => scroll('left')} 
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center border-2 border-white/50 hover:bg-white/20 transition-colors"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 19L8 12L15 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
               <button 
                 onClick={() => scroll('right')} 
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center border-2 border-white/50 hover:bg-white/20 transition-colors"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 5L16 12L9 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
@@ -432,15 +442,6 @@ const Services = () => {
                   className="object-cover rounded-3xl transition-transform duration-700 ease-in-out group-hover:scale-105"
                 />
               </div>
-            </div>
-          </div>
-          
-          {/* Swipe indicator for mobile */}
-          <div className="flex justify-center mt-4 md:hidden">
-            <div className="flex space-x-1">
-              <span className="w-10 h-1 bg-white/40 rounded-full"></span>
-              <span className="w-5 h-1 bg-white/20 rounded-full"></span>
-              <span className="w-5 h-1 bg-white/20 rounded-full"></span>
             </div>
           </div>
         </div>

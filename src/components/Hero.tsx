@@ -42,8 +42,8 @@ const Hero = () => {
         }} 
       />
 
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-28 hero-content">
+      {/* Content - Adjusted positioning for mobile */}
+      <div className="container mx-auto px-4 relative z-10 pt-10 md:pt-28 hero-content">
         {/* Badge */}
         <div className="inline-block bg-[#FF5722] text-white px-3 py-1 md:px-4 md:py-1.5 rounded-full mb-4 md:mb-6 text-xs md:text-sm">
           SV MARINE SERVICES
