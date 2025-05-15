@@ -31,11 +31,42 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif;
 }
 
+.font-dm-sans {
+  font-family: 'DM Sans', sans-serif;
+}
+
 .container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Hero video optimizations */
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wrapper video {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+.hero-overlay {
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: opacity;
+  -webkit-transform: translateZ(0);
+}
+
+.hero-content {
+  z-index: 10;
+  position: relative;
 }
 
 /* Custom buttons */

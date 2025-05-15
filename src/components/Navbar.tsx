@@ -40,19 +40,6 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Center Logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-4">
-          <Link href="/">
-            <Image 
-              src="/images/website-logo.png" 
-              alt="SV Marine Services" 
-              width={150} 
-              height={150}
-              className="p-1"
-            />
-          </Link>
-        </div>
-
         {/* Right Contact Button */}
         <div>
           <Link 

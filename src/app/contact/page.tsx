@@ -1,10 +1,12 @@
 import Navbar from '@/components/Navbar';
+import Logo from '@/components/Logo';
 import Footer from '@/components/Footer';
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
+      <Logo />
       <main className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">

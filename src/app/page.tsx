@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
+import Logo from '@/components/Logo';
 import Hero from '@/components/Hero';
 import ClientLogos from '@/components/ClientLogos';
 import MarineOperations from '@/components/MarineOperations';
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Logo />
       <Hero />
       <main className="py-16">
         <ClientLogos />

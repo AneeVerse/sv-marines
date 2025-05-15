@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center">
-      {/* Background Video */}
+    <section className="relative min-h-screen flex items-center hero-wrapper">
+      {/* Background Video Container */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           src="/video/hero-bg.mp4"
@@ -15,14 +15,25 @@ const Hero = () => {
           loop
           playsInline
           className="absolute w-full h-full object-cover"
+          style={{
+            willChange: 'transform',
+            transform: 'translateZ(0)',
+            backfaceVisibility: 'hidden'
+          }}
         />
       </div>
       
-      {/* Fixed opacity overlay - separate from video container to prevent interactions */}
-      <div className="absolute inset-0 bg-black/40 z-0" style={{ pointerEvents: 'none', willChange: 'auto', isolation: 'isolate' }} />
+      {/* Fixed opacity overlay */}
+      <div 
+        className="absolute inset-0 bg-black/40 z-0 hero-overlay" 
+        style={{ 
+          pointerEvents: 'none',
+          transform: 'translateZ(0)'
+        }} 
+      />
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-28">
+      <div className="container mx-auto px-4 relative z-10 pt-28 hero-content">
         {/* Badge */}
         <div className="inline-block bg-[#FF5722] text-white px-4 py-1.5 rounded-full mb-6 text-sm">
           SV MARINE SERVICES
@@ -39,19 +50,18 @@ const Hero = () => {
           towing, and salvage services—combining innovation with 10+ years of hands-on expertise.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-5">
+        {/* CTA Button */}
+        <div className="flex flex-wrap">
           <Link 
             href="/about-us"
-            className="bg-white text-[#FF5722] rounded-full px-8 py-3.5 font-medium hover:bg-opacity-90 transition-all flex items-center"
+            className="flex items-center relative h-[55px] pl-8 pr-[60px] bg-[#F9F9F9] rounded-[30px] transition-all"
           >
-            Who We Are
-          </Link>
-          <Link 
-            href="/contact"
-            className="border-2 border-white text-white rounded-full px-8 py-3.5 font-medium hover:bg-white hover:text-black transition-all"
-          >
-            Contact Us
+            <span className="font-dm-sans font-medium text-[15px] leading-[30px] text-black capitalize">Who We Are</span>
+            <div className="absolute w-[45px] h-[45px] right-[5px] top-[5px] bg-[#F55B1F] rounded-full flex items-center justify-center">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 1L13 7M13 7L7 13M13 7H1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
           </Link>
         </div>
       </div>
