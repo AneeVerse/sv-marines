@@ -26,6 +26,12 @@ const ClientLogos = () => {
   return (
     <section className="py-12 bg-white overflow-hidden">
       <div className="container mx-auto">
+        {/* Heading for client logos */}
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Our Trusted Clients</h2>
+          <p className="text-gray-600 mt-2">Proudly serving industry leaders across the marine sector</p>
+        </div>
+        
         {/* Logo container with stable dimensions */}
         <div className="logo-slider-container relative h-20 overflow-hidden">
           {/* First row of logos */}
