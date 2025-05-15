@@ -24,11 +24,11 @@ const Services = () => {
                 />
               </div>
             </div>
-            <div className="border-t border-white/10 pt-6 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out transform translate-y-4 group-hover:translate-y-0">
+            <div className="border-t border-white/10 pt-6 opacity-100 group-hover:opacity-0 transition-all duration-700 ease-in-out">
               <p className="text-white/70">Expert planning and execution of maritime projects with precision and efficiency.</p>
             </div>
             {/* Image with hover animation */}
-            <div className="absolute bottom-0 left-0 right-0 h-[360px] group-hover:h-[210px] transition-all duration-700 ease-in-out overflow-hidden rounded-3xl mx-3">
+            <div className="absolute bottom-0 left-0 right-0 h-[210px] group-hover:h-[360px] transition-all duration-700 ease-in-out overflow-hidden rounded-3xl mx-3">
               <Image 
                 src="/images/service/1.png"
                 alt="Project Management"
@@ -51,11 +51,11 @@ const Services = () => {
                 />
               </div>
             </div>
-            <div className="border-t border-white/10 pt-6 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out transform translate-y-4 group-hover:translate-y-0">
+            <div className="border-t border-white/10 pt-6 opacity-100 group-hover:opacity-0 transition-all duration-700 ease-in-out">
               <p className="text-white/70">Comprehensive vessel and maritime structure design with advanced analysis.</p>
             </div>
             {/* Image with hover animation */}
-            <div className="absolute bottom-0 left-0 right-0 h-[360px] group-hover:h-[210px] transition-all duration-700 ease-in-out overflow-hidden rounded-3xl mx-3">
+            <div className="absolute bottom-0 left-0 right-0 h-[210px] group-hover:h-[360px] transition-all duration-700 ease-in-out overflow-hidden rounded-3xl mx-3">
               <Image 
                 src="/images/service/2.png"
                 alt="Design and Analysis"
@@ -78,11 +78,11 @@ const Services = () => {
                 />
               </div>
             </div>
-            <div className="border-t border-white/10 pt-6 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out transform translate-y-4 group-hover:translate-y-0">
+            <div className="border-t border-white/10 pt-6 opacity-100 group-hover:opacity-0 transition-all duration-700 ease-in-out">
               <p className="text-white/70">Expert technical solutions for vessel systems, propulsion, and maritime equipment.</p>
             </div>
             {/* Image with hover animation */}
-            <div className="absolute bottom-0 left-0 right-0 h-[360px] group-hover:h-[210px] transition-all duration-700 ease-in-out overflow-hidden rounded-3xl mx-3">
+            <div className="absolute bottom-0 left-0 right-0 h-[210px] group-hover:h-[360px] transition-all duration-700 ease-in-out overflow-hidden rounded-3xl mx-3">
               <Image 
                 src="/images/service/3.png"
                 alt="Marine Engineering"
@@ -105,11 +105,11 @@ const Services = () => {
                 />
               </div>
             </div>
-            <div className="border-t border-white/10 pt-6 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out transform translate-y-4 group-hover:translate-y-0">
+            <div className="border-t border-white/10 pt-6 opacity-100 group-hover:opacity-0 transition-all duration-700 ease-in-out">
               <p className="text-white/70">Specialized recovery and salvage services for vessels in distress and marine assets.</p>
             </div>
             {/* Image with hover animation */}
-            <div className="absolute bottom-0 left-0 right-0 h-[360px] group-hover:h-[210px] transition-all duration-700 ease-in-out overflow-hidden rounded-3xl mx-3">
+            <div className="absolute bottom-0 left-0 right-0 h-[210px] group-hover:h-[360px] transition-all duration-700 ease-in-out overflow-hidden rounded-3xl mx-3">
               <Image 
                 src="/images/service/4.png"
                 alt="Salvage Operations"

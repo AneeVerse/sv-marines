@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const MarineOperations = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white mt-10 ml-32">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Content Column */}
@@ -22,15 +22,39 @@ const MarineOperations = () => {
             
             <div className="space-y-4 mb-8">
               <div className="flex items-center">
-                <div className="w-6 h-6 rounded-full bg-black mr-4 flex-shrink-0"></div>
+                <div className="w-6 h-6 mr-4 flex-shrink-0">
+                  <Image 
+                    src="/images/Icon (1).png"
+                    alt="Checkmark"
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <span className="font-medium">Expert Team – Master Mariners & Naval Architects</span>
               </div>
               <div className="flex items-center">
-                <div className="w-6 h-6 rounded-full bg-black mr-4 flex-shrink-0"></div>
+                <div className="w-6 h-6 mr-4 flex-shrink-0">
+                  <Image 
+                    src="/images/Icon (1).png"
+                    alt="Checkmark"
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <span className="font-medium">End-to-End Solutions –Design to salvage, seamless execution</span>
               </div>
               <div className="flex items-center">
-                <div className="w-6 h-6 rounded-full bg-black mr-4 flex-shrink-0"></div>
+                <div className="w-6 h-6 mr-4 flex-shrink-0">
+                  <Image 
+                    src="/images/Icon (1).png"
+                    alt="Checkmark"
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <span className="font-medium">Compliance-First Approach - SOLAS, IMCA & maritime regulations</span>
               </div>
             </div>
@@ -55,9 +79,9 @@ const MarineOperations = () => {
               <Image 
                 src="/images/logo/marineoperation-right-img.png" 
                 alt="Marine operations image"
-                width={600}
-                height={350}
-                className="w-full object-cover rounded-lg"
+                width={550}
+                height={300}
+                className=" object-cover rounded-lg"
               />
             </div>
           </div>

@@ -726,6 +726,30 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mr-10 {
+  margin-right: 2.5rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.ml-10 {
+  margin-left: 2.5rem;
+}
+.ml-14 {
+  margin-left: 3.5rem;
+}
+.ml-20 {
+  margin-left: 5rem;
+}
+.ml-24 {
+  margin-left: 6rem;
+}
+.ml-32 {
+  margin-left: 8rem;
+}
 .block {
   display: block;
 }
@@ -797,6 +821,9 @@ video {
 }
 .h-20 {
   height: 5rem;
+}
+.h-\[210px\] {
+  height: 210px;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1579,6 +1606,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 210px;
 }
 
+.group:hover .group-hover\:h-\[360px\] {
+  height: 360px;
+}
+
 .group:hover .group-hover\:translate-x-1 {
   --tw-translate-x: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1622,6 +1653,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
+}
+
+.group:hover .group-hover\:opacity-0 {
+  opacity: 0;
 }
 
 @media (min-width: 640px) {
