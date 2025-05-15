@@ -57,7 +57,9 @@ const Map: React.FC<MapProps> = ({ apiKey }) => {
   
   return (
     <div className="w-full h-[500px] -mt-2">
-      {renderMap()}
+      <div className="w-full h-full" style={{ cursor: 'grab' }}>
+        {renderMap()}
+      </div>
     </div>
   );
 };

@@ -13,13 +13,16 @@ const logoPaths = [
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.13 PM.png",
   "/images/logo/1 (1).png",
   "/images/logo/1 (2).png",
-  "/images/logo/1 (3).png",
+  "/images/logo/4.png",
   "/images/logo/2.png",
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.19 PM.png",
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.16 PM.png",
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.18 PM.png",
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.10 PM.png",
   "/images/logo/WhatsApp Image 2025-04-18 at 2.33.13 PM.png",
+  "/images/logo/1 (1).png",
+  "/images/logo/1 (2).png",
+  "/images/logo/4.png",
 ];
 
 const ClientLogos = () => {

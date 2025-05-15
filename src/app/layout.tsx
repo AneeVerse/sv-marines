@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { DM_Sans, Outfit } from "next/font/google";
 import "./globals.css";
+import ContactButtons from "@/components/ContactButtons";
 
 const dmSans = DM_Sans({ 
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dmSans.variable} ${outfit.variable}`}>
         {children}
+        <ContactButtons />
       </body>
     </html>
   );
