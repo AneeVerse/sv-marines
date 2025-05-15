@@ -6,67 +6,86 @@ const Stats = () => {
   return (
     <section className="py-16 bg-[#001529] text-white relative overflow-hidden">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          {/* Left side - heading and checkboxes */}
+          <div className="md:w-[30%] z-10">
             <span className="uppercase text-xs tracking-wider font-medium text-white/90 mb-4 block">OUR EXPERIENCE</span>
             
-            <h2 className="text-5xl font-bold mb-16 leading-tight">
+            <h2 className="text-5xl font-bold mb-8 leading-tight">
               Decades of<br />
               Marine Mastery
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-6 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <div className="flex items-center">
-                <div className="w-5 h-5 mr-3 flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="19" height="19" stroke="white"/>
-                    <rect x="4" y="4" width="12" height="12" fill="white"/>
-                  </svg>
+                <div className="w-6 h-6 mr-3 flex-shrink-0">
+                  <Image 
+                    src="/images/Component 5.png"
+                    alt="Checkbox"
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="text-sm">Certified Master Mariners</span>
               </div>
               <div className="flex items-center">
-                <div className="w-5 h-5 mr-3 flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="19" height="19" stroke="white"/>
-                    <rect x="4" y="4" width="12" height="12" fill="white"/>
-                  </svg>
+                <div className="w-6 h-6 mr-3 flex-shrink-0">
+                  <Image 
+                    src="/images/Component 5.png"
+                    alt="Checkbox"
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="text-sm">Regulatory Compliance Guaranteed</span>
               </div>
               <div className="flex items-center">
-                <div className="w-5 h-5 mr-3 flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="19" height="19" stroke="white"/>
-                    <rect x="4" y="4" width="12" height="12" fill="white"/>
-                  </svg>
+                <div className="w-6 h-6 mr-3 flex-shrink-0">
+                  <Image 
+                    src="/images/Component 5.png"
+                    alt="Checkbox"
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="text-sm">Naval Architects Onboard</span>
               </div>
               <div className="flex items-center">
-                <div className="w-5 h-5 mr-3 flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="19" height="19" stroke="white"/>
-                    <rect x="4" y="4" width="12" height="12" fill="white"/>
-                  </svg>
+                <div className="w-6 h-6 mr-3 flex-shrink-0">
+                  <Image 
+                    src="/images/Component 5.png"
+                    alt="Checkbox"
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="text-sm">Vessel Optimization Experts</span>
               </div>
               <div className="flex items-center">
-                <div className="w-5 h-5 mr-3 flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="19" height="19" stroke="white"/>
-                    <rect x="4" y="4" width="12" height="12" fill="white"/>
-                  </svg>
+                <div className="w-6 h-6 mr-3 flex-shrink-0">
+                  <Image 
+                    src="/images/Component 5.png"
+                    alt="Checkbox"
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="text-sm">End-to-End Solutions</span>
               </div>
               <div className="flex items-center">
-                <div className="w-5 h-5 mr-3 flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="19" height="19" stroke="white"/>
-                    <rect x="4" y="4" width="12" height="12" fill="white"/>
-                  </svg>
+                <div className="w-6 h-6 mr-3 flex-shrink-0">
+                  <Image 
+                    src="/images/Component 5.png"
+                    alt="Checkbox"
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="text-sm">Salvage & Recovery</span>
               </div>
@@ -87,38 +106,41 @@ const Stats = () => {
             </div>
           </div>
           
-          <div className="relative h-[600px] w-[600px] mr-22 flex justify-center items-center">
-            <div className="absolute inset-0 z-0">
-              <Image 
-                src="/images/our-experience-bg.png"
-                alt="Cargo ship aerial view" 
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-            
-            <div className="absolute top-[20%] right-0 text-right">
+          {/* Middle - Ship image */}
+          <div className="md:w-[40%] relative flex justify-center items-center my-8 md:my-0">
+            <Image 
+              src="/images/our-experience-bg.png"
+              alt="Cargo ship aerial view" 
+              width={600}
+              height={700}
+              className="object-contain"
+              priority
+            />
+          </div>
+          
+          {/* Right side - Stats */}
+          <div className="md:w-[30%] z-10 space-y-16">
+            <div className="text-right">
               <div className="flex items-center justify-end mb-2">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-3">
                   <path d="M10 20L20 10M20 10H10M20 10V20" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <span className="text-6xl font-bold leading-none">10+<span className="text-xl font-medium ml-1">years</span></span>
               </div>
-              <p className="text-sm text-white/80 mt-1 pr-10">
+              <p className="text-sm text-white/80 mt-1">
                 Delivering trusted marine solutions<br />
                 since 2013
               </p>
             </div>
             
-            <div className="absolute bottom-[20%] right-0 text-right">
+            <div className="text-right">
               <div className="flex items-center justify-end mb-2">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-3">
                   <path d="M10 20L20 10M20 10H10M20 10V20" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <span className="text-6xl font-bold leading-none">500+<span className="text-xl font-medium ml-1">Projects</span></span>
               </div>
-              <p className="text-sm text-white/80 mt-1 pr-10">
+              <p className="text-sm text-white/80 mt-1">
                 Successful executions from design<br />
                 to salvage
               </p>
