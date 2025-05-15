@@ -1,18 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-bg.png"
-          alt="Marine background"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          src="/video/hero-bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
