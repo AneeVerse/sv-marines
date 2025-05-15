@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -14,8 +16,10 @@ const Hero = () => {
           playsInline
           className="absolute w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40" />
       </div>
+      
+      {/* Fixed opacity overlay - separate from video container to prevent interactions */}
+      <div className="absolute inset-0 bg-black/40 z-0" style={{ pointerEvents: 'none', willChange: 'auto', isolation: 'isolate' }} />
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 pt-28">
