@@ -41,12 +41,29 @@ const Footer = () => {
                     placeholder="Enter Your Email Address" 
                     className="bg-white text-gray-900 p-3 md:p-4 pr-16 md:pr-20 w-full rounded-full outline-none text-sm"
                   />
-                  <button className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-[#003088] text-white py-1.5 md:py-2 px-2 md:px-4 rounded-full flex items-center h-8 md:h-10 text-xs md:text-sm">
+                  <button className="
+                    absolute right-1 top-1/2 transform -translate-y-1/2
+                    bg-[#003088] text-white
+                    py-1.5 md:py-2 px-2 md:px-4 rounded-full flex items-center h-8 md:h-10 text-xs md:text-sm
+                    transition-all duration-300
+                    hover:bg-white
+                    hover:border-2 hover:border-[#003088]
+                    hover:text-[#003088]
+                    hover:shadow-lg
+                    
+                    group
+                  ">
                     <span className="hidden sm:inline">Connect Now</span>
                     <span className="sm:hidden">Connect</span>
-                    <div className="ml-1 md:ml-2 bg-white rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                    <div className="ml-1 md:ml-2 bg-white group-hover:bg-[#003088] rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center transition-colors duration-300">
                       <svg width="10" height="10" className="md:w-3 md:h-3" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 1L13 7M13 7L7 13M13 7H1" stroke="#003088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M7 1L13 7M13 7L7 13M13 7H1"
+                          stroke="#003088"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="group-hover:stroke-white transition-colors duration-300"
+                        />
                       </svg>
                     </div>
                   </button>
