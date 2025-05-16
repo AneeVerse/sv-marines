@@ -67,7 +67,7 @@ const ContactButtons = () => {
         
         <button 
           onClick={toggleOpen} 
-          className={`w-14 h-14 bg-[#F55B1F] rounded-full flex items-center justify-center text-white ${isOpen ? 'rotate-45' : 'rotate-0'} transition-transform shadow-md`}
+          className={`w-14 h-14 bg-[#F55B1F] rounded-full flex items-center justify-center text-white transition-transform shadow-md`}
           aria-label={isOpen ? "Close contact buttons" : "Open contact buttons"}
         >
           {isOpen ? (

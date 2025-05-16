@@ -138,13 +138,12 @@ export default function Navbar() {
           />
         )}
 
-        {/* Right Contact Button */}
-        <div>
+        {/* Right Contact Button - Hidden on mobile */}
+        <div className="hidden md:block">
           <button 
-                       className="bg-[#FF5722] text-white rounded-md py-1.5 px-3 md:py-2 md:px-6 text-xs md:text-base font-medium uppercase cursor-pointer hover:bg-[#FF5722]/80 transition-colors duration-300"
-                       >
-                         Contact Now
-                 
+            className="bg-[#FF5722] text-white rounded-md py-1.5 px-3 md:py-2 md:px-6 text-xs md:text-base font-medium uppercase cursor-pointer hover:bg-[#FF5722]/80 transition-colors duration-300"
+          >
+            Contact Now
           </button>
         </div>
       </div>

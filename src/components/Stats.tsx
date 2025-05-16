@@ -21,7 +21,9 @@ const Stats = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left side - heading and checkboxes */}
           <div className="w-full md:w-[30%] z-10 mb-8 md:mb-0">
-            <span className="uppercase text-xs tracking-wider font-medium text-white/90 mb-2 md:mb-4 block">OUR EXPERIENCE</span>
+            <div className="inline-block bg-[#FF5722] text-white px-3 py-1 md:px-4 md:py-1.5 rounded-full mb-4 md:mb-6 text-xs md:text-sm">
+              OUR EXPERIENCE
+            </div>
             
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-10 leading-tight">
               Decades of<br />
@@ -106,14 +108,15 @@ const Stats = () => {
             <div className="inline-block">
               <button 
                 onClick={() => scrollToSection('services')}
-                className="border border-white rounded-full py-1.5 sm:py-2 md:py-3 px-4 sm:px-6 md:px-8 text-xs md:text-sm font-medium inline-flex items-center hover:bg-white hover:text-[#001529] transition-colors duration-300 cursor-pointer"
+                className="relative overflow-hidden border-2 border-white rounded-full py-2 md:py-3 px-5 md:px-6 font-medium flex items-center group cursor-pointer"
               >
-                More Details
-                <div className="ml-2 md:ml-4 bg-white rounded-full w-6 h-6 sm:w-7 sm:h-7 md:w-10 md:h-10 flex items-center justify-center text-[#001529]">
-                  <svg width="10" height="10" className="sm:w-[12px] sm:h-[12px] md:w-[14px] md:h-[14px]" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 1L13 7M13 7L7 13M13 7H1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <span className="relative z-10 text-white transition-colors duration-300 group-hover:text-[#001529]">More Details</span>
+                <span className="absolute inset-0 bg-transparent transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 -z-10 group-hover:bg-white"></span>
+                <span className="bg-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center ml-3 md:ml-4 relative z-10 transition-all duration-300 group-hover:bg-[#001529]">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#001529" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-[#001529] transform group-hover:translate-x-1 transition-transform duration-300 group-hover:stroke-white">
+                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
-                </div>
+                </span>
               </button>
             </div>
           </div>

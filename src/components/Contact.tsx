@@ -221,18 +221,16 @@ const Contact = () => {
               <div className="flex justify-start">
                 <button 
                   type="submit"
-                  className={`bg-gray-100 hover:bg-gray-200 text-black font-semibold rounded-full py-2 md:py-3 px-6 md:px-8 flex items-center transition-colors text-sm md:text-base ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                  className={`relative overflow-hidden border-2 border-black rounded-full py-2 md:py-3 px-5 md:px-6 font-medium flex items-center group cursor-pointer transition-all text-sm md:text-base ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit Now'}
-                  <div className="ml-3 md:ml-4 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-white">
-                    <Image 
-                      src="/images/contact/Background.png"
-                      alt="Submit"
-                      width={50}
-                      height={50}
-                    />
-                  </div>
+                  <span className="relative z-10 text-black transition-colors duration-300 group-hover:text-black">{isSubmitting ? 'Submitting...' : 'Submit Now'}</span>
+                  <span className="absolute inset-0 bg-transparent transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 -z-10 group-hover:bg-[#FF5722]"></span>
+                  <span className="bg-black rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center ml-3 md:ml-4 relative z-10 transition-all duration-300 group-hover:bg-[#FF5722]">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-white transform group-hover:translate-x-1 transition-transform duration-300">
+                      <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
                 </button>
               </div>
             </form>

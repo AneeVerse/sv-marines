@@ -79,7 +79,9 @@ const Services = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-10 md:mb-16">
-          <span className="uppercase text-xs tracking-wider font-semibold">Our services</span>
+          <div className="inline-block bg-[#FF5722] text-white px-3 py-1 md:px-4 md:py-1.5 rounded-full mb-4 md:mb-6 text-xs md:text-sm">
+            OUR SERVICES
+          </div>
           <div className="flex justify-between items-end">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-2 md:mt-4">Essential Features of our Services.</h2>
             

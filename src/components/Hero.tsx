@@ -64,14 +64,16 @@ const Hero = () => {
         <div className="flex flex-wrap">
           <button 
             onClick={() => scrollToSection('stats')}
-            className="flex items-center relative h-[45px] md:h-[55px] pl-6 md:pl-8 pr-[50px] md:pr-[60px] bg-[#F9F9F9] rounded-[30px] transition-all cursor-pointer"
+            className="relative overflow-hidden border-2 border-white rounded-full py-2 md:py-3 px-5 md:px-6 font-medium flex items-center group cursor-pointer"
           >
-            <span className="font-dm-sans font-medium text-[14px] md:text-[15px] leading-[30px] text-black capitalize">Who We Are</span>
-            <div className="absolute w-[35px] h-[35px] md:w-[45px] md:h-[45px] right-[5px] top-[5px] bg-[#F55B1F] rounded-full flex items-center justify-center">
-              <svg width="12" height="12" className="md:w-[14px] md:h-[14px]" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 1L13 7M13 7L7 13M13 7H1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <span className="relative z-10 text-white transition-colors duration-300 group-hover:text-black">Who We Are</span>
+            <span className="absolute inset-0 bg-transparent transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 -z-10 group-hover:bg-white hover:text-black"></span>
+            <span className="bg-[#F55B1F] rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center ml-3 md:ml-4 relative z-10 transition-all duration-300 group-hover:bg-black">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" 
+                className="w-4 h-4 text-white transform group-hover:translate-x-1 transition-transform duration-300">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </div>
+            </span>
           </button>
         </div>
       </div>
